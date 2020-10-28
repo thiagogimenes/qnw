@@ -1,0 +1,28 @@
+Sendo um visitante do site Parodify
+Quero fazer meu cadastro 
+Para que eu possa ouvir minhas músicas favoritas
+
+Cadastro
+Dado que acesso a página de cadastro
+Quando submeto o meu cadastro com email, senha e confirmação de senha
+Então devo ser redirecionado para área logada
+
+Email não informado
+Dado que acesso a página de cadastro
+Quando submeto o meu cadastro sem o email
+Então devo ver "Oops! Informe seu email"
+
+Senha não informada
+Dado que acesso a página de cadastro
+Quando submeto o meu cadastro sem a senha
+Então devo ver "Oops! Informe sua senha"
+
+Senha divergente
+Dado que acesso a página de cadastro
+Quando submeto o meu cadastro com senha divergentes
+Então devo ver "Oops! Senhas não são iguais"
+
+Nenhum campo preenchido
+Dado que acesso a página de cadastro
+Quando submeto o meu cadastro sem preencher os campos.
+Então devo ver "Oops! Informe email e senha"
