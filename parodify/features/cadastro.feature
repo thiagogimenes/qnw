@@ -5,36 +5,34 @@ Funcionalidade: Cadastro de Usuários
     Quero fazer o meu cadastro
     Para que eu possa ouvir minhas músicas favoritas
 
-@happy
-Cenario: Cadastro
-    Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro com:
-        |email|xulia2804@uorak.com|
-        |senha|pwd123|
-        |senha_confirma|pwd123|
-    Então devo ser redirecionado para a área logada
+    @happy
+    Cenario: Cadastro
+        Dado que acesso a página de cadastro
+        Quando submeto o meu cadastro com:
+            | email          | thiagoaticus@hotmail.com |
+            | senha          | pwd123                   |
+            | senha_confirma | pwd123                   |
+        Então devo ser redirecionado para a área logada
 
-Cenario: Email não informado
-    Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro sem o email
-    Então devo ver Oops! Informe seu email
- 
-Cenario: Senha não informada
-    Dado que acesso a página de cadastro
-    Quando submeto o meu cadastro sem a senha
-    Então devo ver Oops! Informe sua senha
+    Esquema do Cenário: Tentativa de Cadastro
 
-Cenario: Senha divergente
-    Dado que acesso a página de cadastro
-    Quando submeto meu cadastro com senha divergente
-    Então devo ver Opps! Senhas não são iguais
+        Dado que acesso a página de cadastro
+        Quando submeto o meu cadastro com:
+            | email          | <email>          |
+            | senha          | <senha>          |
+            | senha_confirma | <confirma_senha> |
 
-Cenario: Nenhum campo preenchido
-    Dado que acesso a página de cadastro
-    Quando submeto meu cadastro sem preencher os campos
-    Então devo ver Opps! Informe seu email e sua senha
+        Então devo ver a mensagem: "<mensagem_saida>"
 
-Cenario: Email já cadastrado
-    Dado que acesso a página de cadastro
-    Quando submento um email já cadastrado 
-    Então devo ver Oops! Email já cadastrado.
+        Exemplos:
+            | email                    | senha  | confirma_senha | mensagem_saida                       |
+            |                          | pwd123 | pwd123         | Oops! Informe seu email.             |
+            | thiagoaticus@hotmail.com |        |                | Oops! Informe sua senha.             |
+            | thiagoaticus@hotmail.com | pwd123 | abc321         | Oops! Senhas não são iguais.         |
+            |                          |        |                | Oops! Informe seu email e sua senha. |
+    @temp
+    Cenario: Validação do campo email
+        #validação da propriedade email.
+        Quando acesso a página de cadastro
+        Então deve exibir o seguinte css: "input[type=email]"
+
