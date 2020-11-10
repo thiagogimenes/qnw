@@ -4,8 +4,7 @@ Funcionalidade: Cadastro de Usuários
     Sendo um visitante do site Parodify
     Quero fazer o meu cadastro
     Para que eu possa ouvir minhas músicas favoritas
-
-    @happy
+   
     Cenario: Cadastro
         Dado que acesso a página de cadastro
         Quando submeto o meu cadastro com:
@@ -30,8 +29,7 @@ Funcionalidade: Cadastro de Usuários
             | thiagoaticus@hotmail.com |        |                | Oops! Informe sua senha.             |
             | thiagoaticus@hotmail.com | pwd123 | abc321         | Oops! Senhas não são iguais.         |
             |                          |        |                | Oops! Informe seu email e sua senha. |
-    @temp
-    Cenario: Validação do campo email
+     Cenario: Validação do campo email
         #validação da propriedade email.
         Quando acesso a página de cadastro
         Então deve exibir o seguinte css: "input[type=email]"

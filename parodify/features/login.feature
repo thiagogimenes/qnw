@@ -3,13 +3,13 @@
 Funcionalidade: Login
     Sendo um usuário previamente cadastrado
     Quero acessar o sistema com o meu email e senha
-    Para que eu possa ter acesso as plalists do Parodify
+    Para que eu possa ter acesso as playlists do Parodify
 
     Cenario: Login do usuário
 
         Dado que acesso a página de Login
         Quando submeto minhas credenciais com: "thiagoaticus@hotmail.com" e "pwd123"
-        Então devo ser redirecionado para área logada
+        Então devo ser redirecionado para a área logada
 
     Esquema do Cenário: Tentativa de login
 
