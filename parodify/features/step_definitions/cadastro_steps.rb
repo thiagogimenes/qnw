@@ -16,7 +16,7 @@ Quando("submeto o meu cadastro com:") do |table|
 end
 
 Então("devo ser redirecionado para a área logada") do
-  expect(page).to have_css ".dashboard"
+  expect(page.text).to have_content "Tocadas Recentemente"
 end
 
 Então("devo ver a mensagem: {string}") do |expect_message|

@@ -4,11 +4,12 @@ Funcionalidade: Login
     Sendo um usuário previamente cadastrado
     Quero acessar o sistema com o meu email e senha
     Para que eu possa ter acesso as playlists do Parodify
-
+    
+    @smoke
     Cenario: Login do usuário
 
         Dado que acesso a página de Login
-        Quando submeto minhas credenciais com: "thiagoaticus@hotmail.com" e "pwd123"
+        Quando submeto minhas credenciais com: "thiagoaticus@gmail.com" e "pwd123"
         Então devo ser redirecionado para a área logada
 
     Esquema do Cenário: Tentativa de login
@@ -23,4 +24,4 @@ Funcionalidade: Login
             |                          |        |
             | thiagoaticus@hotmail.com |        |
             | thiagoaticus@404.com.br  |        |
-
+            |                          | abc123 |
